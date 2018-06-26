@@ -150,7 +150,14 @@ export default {
       arr.forEach(v => {
         window.tinymce.get(_this.tinymceId).insertContent(`<img class="wscnph" src="${v.url}" >`)
       })
-    }
+    },
+    /**
+     mode(String)
+    'readonly'
+    'code' */
+    setMode(mode) {
+      window.tinymce.get(this.tinymceId).setMode(mode)
+    },
   },
   destroyed() {
     this.destroyTinymce()
